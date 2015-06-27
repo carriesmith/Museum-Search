@@ -1,0 +1,25 @@
+<header>
+  <h1>Rijks Museum</h1>
+  <div class="search-box">
+    <form action="" ng-submit="search($event)">
+
+      <!-- add to make call on text change: ng-change="search($event)" -->
+      <input type="text" ng-model="searchQuery">
+      <input type="submit" value="Search">
+    </form>
+  </div>
+</header>
+
+<section class="art-work">
+
+   <!-- template -->
+  <art-item 
+    ng-repeat="item in artItems" 
+    ng-if="item.webImage !== null"
+    class="art-item"></art-item>
+  
+ <no-result 
+    ng-if="artItems.length === 0"
+    class="art-item"></no-result>
+
+</section>

@@ -1,0 +1,17 @@
+<header>
+  <h1>Rijks Museum</h1>
+</header>
+
+<section class="single-item">
+
+  <div class="image">
+    <img ng-src= "{{artWork.webImage.url}}" alt="">
+  </div>
+  <div class="content">
+    <h2>{{artWork.title}}</h2>
+    <h3>{{artWork.principalMaker}}</h3>
+    <ul>
+      <li ng-repeat="item in artWork.documentation">{{item}}</p>
+    </ul>
+  </div>
+</section>
